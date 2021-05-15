@@ -53,4 +53,4 @@ button.on("click", function() {
             var filtered = "Yes"
             filteredData = filteredData.filter(record => record.shape === inputShape);
         }
-    
+        tbody.html("");
