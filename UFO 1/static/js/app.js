@@ -20,6 +20,7 @@ function displayTable(datafortable) {
 
 button.on("click", function() {
 
+    // Select input element and get the raw HTML
       var inputValue = d3.select("#datetime").property("value");
   
     console.log(inputValue);
@@ -29,7 +30,7 @@ button.on("click", function() {
        
         var filteredData = tableData.filter(date => date.datetime === inputValue);
         console.log(filteredData);
-    
+    // remove any children from list
               tbody.html("");
         displayTable(filteredData);
     }
