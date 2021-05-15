@@ -33,4 +33,24 @@ button.on("click", function() {
         var inputCountry = d3.select("#country").property("value").toLowerCase();
         var inputShape = d3.select("#shape").property("value").toLowerCase();
 
-        
+        if (inputDate !== "") {
+            var filtered = "Yes";
+            filteredData = filteredData.filter(record => record.datetime === inputDate);
+        }
+        if (inputCity !== "") {
+            var filtered = "Yes";
+            filteredData = filteredData.filter(record => record.city === inputCity);
+        }
+        if (inputState !== "") {
+            var filtered = "Yes"
+            filteredData = filteredData.filter(record => record.state === inputState);
+        }
+        if (inputCountry !== "") {
+            var filtered = "Yes"
+            filteredData = filteredData.filter(record => record.country === inputCountry);
+        }
+        if (inputShape !== "") {
+            var filtered = "Yes"
+            filteredData = filteredData.filter(record => record.shape === inputShape);
+        }
+    
