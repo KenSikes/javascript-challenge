@@ -1,11 +1,10 @@
-  
 // from data.js
 var tableData = data;
 
 // YOUR CODE HERE!
 var button = d3.select("#filter-btn");
 
-// Reference to the table body
+// Reference to table body
 var tbody = d3.select("tbody");
 
 function displayTable(datafortable) {
@@ -18,10 +17,12 @@ function displayTable(datafortable) {
     })
 };
 
+displayTable(data);
+
 button.on("click", function() {
 
-    // Select input element and get the raw HTML
-      var inputValue = d3.select("#datetime").property("value");
+    // Select input element get raw HTML 
+    var inputValue = d3.select("#datetime").property("value");
   
     console.log(inputValue);
     console.log(d3.event.target.value);
@@ -30,8 +31,9 @@ button.on("click", function() {
        
         var filteredData = tableData.filter(date => date.datetime === inputValue);
         console.log(filteredData);
-    // remove any children from list
-              tbody.html("");
+    
+        // remove children from list
+        tbody.html("");
         displayTable(filteredData);
     }
     else {
@@ -39,3 +41,5 @@ button.on("click", function() {
     }
 
 });
+
+
