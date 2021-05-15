@@ -54,3 +54,17 @@ button.on("click", function() {
             filteredData = filteredData.filter(record => record.shape === inputShape);
         }
         tbody.html("");
+
+        if (filteredData.length === 0) {
+            var nodata = tbody.append("h4");
+            nodata.text("No matching data!");       
+        }
+        else if (filtered === "Yes") {
+            console.log(filteredData.length);
+            displayTable(filteredData);
+        }
+        else {
+            console.log(tableData.length);
+            displayTable(tableData);
+        };    
+    });
