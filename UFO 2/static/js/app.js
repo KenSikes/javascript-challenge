@@ -19,3 +19,10 @@ function displayTable(datafortable) {
         });
     })
 };
+
+
+
+displayTable(tableData);
+
+button.on("click", function() {
+    var filteredData = tableData;
