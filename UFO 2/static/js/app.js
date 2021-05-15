@@ -9,7 +9,7 @@ var button = d3.select("#filter-btn");
 
 
 var tbody = d3.select("tbody");
-
+//Display table
 function displayTable(datafortable) {
     datafortable.forEach((tableData) => {
         var row = tbody.append("tr");
@@ -26,7 +26,7 @@ displayTable(tableData);
 
 button.on("click", function() {
     var filteredData = tableData;
-    
+    // Select input element get raw HTML
         var inputDate = d3.select("#datetime").property("value");
         var inputCity = d3.select("#city").property("value").toLowerCase();
         var inputState = d3.select("#state").property("value").toLowerCase();
